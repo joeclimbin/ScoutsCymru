@@ -27,38 +27,38 @@
         --text: #1a1033;
         --text-mid: #4b3f6b;
         --text-muted: #8b7aaa;
-    }
+      }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* ── NMND Tooltip ── */
-    .nmnd-tooltip {
-      position: relative;
-      border-bottom: 1.5px dashed var(--purple);
-      cursor: help;
-      display: inline;
-    }
-    .nmnd-popup {
-      display: none;
-      position: absolute;
-      top: calc(100% + 8px);
-      left: 0;
-      width: 320px;
-      background: var(--surface);
-      border: 1.5px solid var(--border);
-      border-left: 4px solid var(--purple);
-      border-radius: 10px;
-      padding: 12px 14px;
-      font-size: 0.81rem;
-      color: var(--text-mid);
-      line-height: 1.6;
-      box-shadow: 0 4px 20px rgba(91,45,142,0.15);
-      z-index: 100;
-      font-weight: 400;
-      text-align: left;
-      cursor: default;
-    }
-  /* Invisible bridge fills the gap between trigger and popup so mouse doesn't lose hover */
+      /* ── NMND Tooltip ── */
+      .nmnd-tooltip {
+        position: relative;
+        border-bottom: 1.5px dashed var(--purple);
+        cursor: help;
+        display: inline;
+      }
+      .nmnd-popup {
+        display: none;
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        width: 320px;
+        background: var(--surface);
+        border: 1.5px solid var(--border);
+        border-left: 4px solid var(--purple);
+        border-radius: 10px;
+        padding: 12px 14px;
+        font-size: 0.81rem;
+        color: var(--text-mid);
+        line-height: 1.6;
+        box-shadow: 0 4px 20px rgba(91,45,142,0.15);
+        z-index: 100;
+        font-weight: 400;
+        text-align: left;
+        cursor: default;
+      }
+      /* Invisible bridge fills the gap between trigger and popup so mouse doesn't lose hover */
       .nmnd-popup::before {
         content: '';
         position: absolute;
@@ -434,96 +434,95 @@
           <a href="https://learn.scouts.org.uk" target="_blank">Scouts Learning</a>
           <a href="https://www.scoutscymru.org.uk" target="_blank">ScoutsCymru</a>
         </div>
-        <div class="header-tabs">
-          <button class="tab-btn active" onclick="switchTab('journey', this)">Your Journey</button>
-          <button class="tab-btn" onclick="switchTab('dbs', this)">DBS Check</button>
-          <button class="tab-btn" onclick="switchTab('mandatory', this)">Mandatory Learning</button>
-          <button class="tab-btn" onclick="switchTab('growing', this)">Growing Roots</button>
-          <button class="tab-btn" onclick="switchTab('additional', this)">Additional Learning</button>
-          <button class="tab-btn" onclick="switchTab('roles', this)">Roles</button>
-          <button class="tab-btn" onclick="switchTab('branching', this)">Branching Out</button>
-        </div>
+      </div>
+      <div class="header-tabs">
+        <button class="tab-btn active" onclick="switchTab('journey', this)">Your Journey</button>
+        <button class="tab-btn" onclick="switchTab('dbs', this)">DBS Check</button>
+        <button class="tab-btn" onclick="switchTab('mandatory', this)">Mandatory Learning</button>
+        <button class="tab-btn" onclick="switchTab('growing', this)">Growing Roots</button>
+        <button class="tab-btn" onclick="switchTab('additional', this)">Additional Learning</button>
+        <button class="tab-btn" onclick="switchTab('roles', this)">Roles</button>
+        <button class="tab-btn" onclick="switchTab('branching', this)">Branching Out</button>
       </div>
     </div>
-      <div class="main">
+    <div class="main">
 
-          <!-- ══════════════════════════════════════════
-               TAB 1 — YOUR JOURNEY
-          ══════════════════════════════════════════ -->
-          <div class="tab-panel active" id="tab-journey">
+    <!-- ══════════════════════════════════════════
+         TAB 1 — YOUR JOURNEY
+    ══════════════════════════════════════════ -->
+      <div class="tab-panel active" id="tab-journey">
+        <div class="callout">
+          <strong>All volunteers (except <span class="nmnd-tooltip" tabindex="0">Non-Member Needs Disclosure<span class="nmnd-popup">A <strong>Non-Member Needs Disclosure (NMND)</strong> is the official title for an adult — typically a parent or carer — who helps out on an occasional basis. They are not a member of Scouts or the Section Team. Anyone added to the Scout Membership System as an NMND will need a DBS check. Once complete they can attend overnight events. Scouts Cymru expects NMNDs who attend regularly or attend overnight camps to also complete the <strong>Safety and Safeguarding</strong> online modules. <a href="#" onclick="switchTab('roles', document.querySelectorAll('.tab-btn')[4]); return false;" style="color:var(--purple);font-weight:600;white-space:nowrap;">See the Roles tab for more info →</a></span></span>) must complete Mandatory Training and all four Growing Roots modules.</strong>
+          Some roles — Trustees, GLVs, District Leadership — have additional requirements. See the <a href="#" onclick="switchTab('additional', document.querySelectorAll('.tab-btn')[3]); return false;" style="color:var(--purple);font-weight:600;">Additional Learning</a> tab for details.
+          <br><br>
+          The <strong>Scout Membership System (SMS)</strong> is the Scout Association's membership and learning system for adult volunteers. It is separate from <strong>Online Scout Manager (OSM)</strong>, which you may also be added to — OSM is a digital system for managing young members and the week-to-week running of sections.
+        </div>
         
-            <div class="callout">
-              <strong>All volunteers (except <span class="nmnd-tooltip" tabindex="0">Non-Member Needs Disclosure<span class="nmnd-popup">A <strong>Non-Member Needs Disclosure (NMND)</strong> is the official title for an adult — typically a parent or carer — who helps out on an occasional basis. They are not a member of Scouts or the Section Team. Anyone added to the Scout Membership System as an NMND will need a DBS check. Once complete they can attend overnight events. Scouts Cymru expects NMNDs who attend regularly or attend overnight camps to also complete the <strong>Safety and Safeguarding</strong> online modules. <a href="#" onclick="switchTab('roles', document.querySelectorAll('.tab-btn')[4]); return false;" style="color:var(--purple);font-weight:600;white-space:nowrap;">See the Roles tab for more info →</a></span></span>) must complete Mandatory Training and all four Growing Roots modules.</strong>
-              Some roles — Trustees, GLVs, District Leadership — have additional requirements. See the <a href="#" onclick="switchTab('additional', document.querySelectorAll('.tab-btn')[3]); return false;" style="color:var(--purple);font-weight:600;">Additional Learning</a> tab for details.
-              <br><br>
-              The <strong>Scout Membership System (SMS)</strong> is the Scout Association's membership and learning system for adult volunteers. It is separate from <strong>Online Scout Manager (OSM)</strong>, which you may also be added to — OSM is a digital system for managing young members and the week-to-week running of sections.
-            </div>
+        <div class="progress-wrap" id="progressWrap">
+          <span class="progress-label">Your progress</span>
+          <div class="progress-bar-outer">
+            <div class="progress-bar-inner" id="progressBar" style="width:0%"></div>
+          </div>
+          <span class="progress-count" id="progressCount">0 / 12</span>
+        </div>
+        <div class="progress-note" style="margin-top:-18px;margin-bottom:24px;font-size:0.72rem;color:var(--text-muted);padding-left:4px;">
+          ℹ Your progress is saved in this browser — ticks will still be here when you come back. <a href="#" onclick="clearProgress();return false;" style="color:var(--text-muted);">Reset all</a>
+        </div>
         
-            <div class="progress-wrap" id="progressWrap">
-              <span class="progress-label">Your progress</span>
-              <div class="progress-bar-outer">
-                <div class="progress-bar-inner" id="progressBar" style="width:0%"></div>
+        <div class="timeline">
+        
+          <!-- ── Day 1 ── -->
+          <div class="milestone" data-tint="purple">
+            <div class="milestone-line"></div>
+            <div class="milestone-label">
+              <div class="milestone-label-inner day1">
+                <span class="day-num">Day 1</span>
+                <span class="day-label">Getting Started</span>
               </div>
-              <span class="progress-count" id="progressCount">0 / 12</span>
             </div>
-            <div class="progress-note" style="margin-top:-18px;margin-bottom:24px;font-size:0.72rem;color:var(--text-muted);padding-left:4px;">
-              ℹ Your progress is saved in this browser — ticks will still be here when you come back. <a href="#" onclick="clearProgress();return false;" style="color:var(--text-muted);">Reset all</a>
-            </div>
+            <div class="milestone-cards">
         
-            <div class="timeline">
-        
-              <!-- ── Day 1 ── -->
-              <div class="milestone" data-tint="purple">
-                <div class="milestone-line"></div>
-                <div class="milestone-label">
-                  <div class="milestone-label-inner day1">
-                    <span class="day-num">Day 1</span>
-                    <span class="day-label">Getting Started</span>
-                  </div>
+              <div class="task-card" onclick="toggleTask(this)">
+                <div class="task-checkbox">
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 3.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
                 </div>
-                <div class="milestone-cards">
-        
-                  <div class="task-card" onclick="toggleTask(this)">
-                    <div class="task-checkbox">
-                      <svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 3.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                    </div>
-                    <div class="task-body">
-                      <div class="task-title">Your GLV or Team Leader adds you to the Membership System</div>
-                      <div class="task-meta"><span class="tag tag-action">Action by GLV/TL</span></div>
-                      <div class="task-desc">They'll need your full name, email address, date of birth and postcode. This starts the clock on your 30-day mandatory training window.</div>
-                    </div>
-                  </div>
-        
-                  <div class="task-card" onclick="toggleTask(this)">
-                    <div class="task-checkbox">
-                      <svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 3.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                    </div>
-                    <div class="task-body">
-                      <div class="task-title">Log in to the Scout Membership System</div>
-                      <div class="task-meta"><span class="tag tag-action">Your action</span></div>
-                      <div class="task-desc">You'll receive a welcome email. Follow the link to set up your account, read and tick the declaration, and complete your profile — including contact details, references, ethnicity, and gender.</div>
-                      <div class="task-links">
-                        <a href="https://membership.scouts.org.uk" target="_blank" class="task-link">↗ membership.scouts.org.uk</a>
-                      </div>
-                    </div>
-                  </div>
-        
-                  <div class="task-card" onclick="toggleTask(this)">
-                    <div class="task-checkbox">
-                      <svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 3.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                    </div>
-                    <div class="task-body">
-                      <div class="task-title">Notify your GLV/Team Leader that your profile is complete</div>
-                      <div class="task-meta"><span class="tag tag-action">Your action</span></div>
-                      <div class="task-desc">Once you've signed the declaration and completed your profile, let your GLV or Team Leader know. This triggers the DBS check process — an automated email will be sent to you with next steps.</div>
-                      <div class="task-links">
-                        <a href="#" onclick="switchTab('dbs', document.querySelectorAll('.tab-btn')[1]); return false;" class="task-link teal">ℹ DBS — what happens next</a>
-                      </div>
-                    </div>
-                  </div>
-        
+                <div class="task-body">
+                  <div class="task-title">Your GLV or Team Leader adds you to the Membership System</div>
+                  <div class="task-meta"><span class="tag tag-action">Action by GLV/TL</span></div>
+                  <div class="task-desc">They'll need your full name, email address, date of birth and postcode. This starts the clock on your 30-day mandatory training window.</div>
                 </div>
               </div>
+        
+              <div class="task-card" onclick="toggleTask(this)">
+                <div class="task-checkbox">
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 3.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </div>
+                <div class="task-body">
+                  <div class="task-title">Log in to the Scout Membership System</div>
+                  <div class="task-meta"><span class="tag tag-action">Your action</span></div>
+                  <div class="task-desc">You'll receive a welcome email. Follow the link to set up your account, read and tick the declaration, and complete your profile — including contact details, references, ethnicity, and gender.</div>
+                  <div class="task-links">
+                    <a href="https://membership.scouts.org.uk" target="_blank" class="task-link">↗ membership.scouts.org.uk</a>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="task-card" onclick="toggleTask(this)">
+                <div class="task-checkbox">
+                  <svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 3.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </div>
+                <div class="task-body">
+                  <div class="task-title">Notify your GLV/Team Leader that your profile is complete</div>
+                  <div class="task-meta"><span class="tag tag-action">Your action</span></div>
+                  <div class="task-desc">Once you've signed the declaration and completed your profile, let your GLV or Team Leader know. This triggers the DBS check process — an automated email will be sent to you with next steps.</div>
+                  <div class="task-links">
+                    <a href="#" onclick="switchTab('dbs', document.querySelectorAll('.tab-btn')[1]); return false;" class="task-link teal">ℹ DBS — what happens next</a>
+                  </div>
+                </div>
+              </div>
+        
+            </div>
+          </div>
         
               <!-- ── Within 30 days ── -->
               <div class="milestone" data-tint="red">
@@ -705,7 +704,7 @@
               </div>
         
             </div><!-- end timeline -->
-          </div>
+      </div>
         
           <!-- ══════════════════════════════════════════
                TAB 2 — DBS CHECK
