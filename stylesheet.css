@@ -99,7 +99,7 @@
         cursor: pointer; transition: all 0.15s; white-space: nowrap;
       }
       .tab-btn:hover { background: rgba(255,255,255,0.2); color: white; }
-      .tab-btn.active { background: var(--bg); color: var(--purple); font-weight: 600; }
+      .tab-btn.active { background: var(--bg); color: var(--red); font-weight: 600; }
       .tab-btn.coming-soon { opacity: 0.55; cursor: default; font-style: italic; }
       
       /* ── MAIN ── */
