@@ -11,12 +11,13 @@
         --green: #059669;
         --green-faint: #ecfdf5;
         --red: #dc2626;
+        --red-faint: #fff5f5;
         --blue: #2563eb;
         --blue-faint: #eff6ff;
         --bg: #f8f7fc;
         --surface: #ffffff;
         --border: #e5e0f0;
-        --text: #1a1033;
+        --text: black;
         --text-mid: #4b3f6b;
         --text-muted: #8b7aaa;
       }
@@ -26,7 +27,7 @@
       /* ── NMND Tooltip ── */
       .nmnd-tooltip {
         position: relative;
-        border-bottom: 1.5px dashed var(--purple);
+        border-bottom: 1.5px dashed var(--red);
         cursor: help;
         display: inline;
       }
@@ -37,8 +38,8 @@
         left: 0;
         width: 320px;
         background: var(--surface);
-        border: 1.5px solid var(--border);
-        border-left: 4px solid var(--purple);
+        border: 1.5px solid var(--red-faint);
+        border-left: 4px solid var(--red);
         border-radius: 10px;
         padding: 12px 14px;
         font-size: 0.81rem;
@@ -60,7 +61,7 @@
         height: 12px;
         background: transparent;
       }
-      .nmnd-popup strong { color: var(--purple); font-weight: 600; }
+      .nmnd-popup strong { color: var(--red); font-weight: 600; }
       .nmnd-tooltip:hover .nmnd-popup,
       .nmnd-tooltip:focus .nmnd-popup,
       .nmnd-popup:hover { display: block; }
@@ -89,13 +90,13 @@
       .header-links a {
         color: var(--red); font-size: 0.76rem; text-decoration: none;
         background: white; border: 1px solid white;
-        padding: 4px 11px; border-radius: 10px; transition: all 0.15s; white-space: nowrap;
+        padding: 4px 11px; border-radius: 8px; transition: all 0.15s; white-space: nowrap;
       }
-      .header-links a:hover { background: rgba(255,255,255,0.22); color: white; }
+      .header-links a:hover { background: rgba(255,255,255,0.22); color: white; border: 2px solid yellow; }
       
       .header-tabs { max-width: 1100px; margin: 0 auto; padding: 16px 32px 0; display: flex; gap: 4px; flex-wrap: wrap; }
       .tab-btn {
-        background: rgba(255,255,255,0.1); border: none; color: rgba(255,255,255,0.7);
+        background: var(--red); border: none; color: white;
         padding: 8px 18px; border-radius: 8px 8px 0 0;
         font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500;
         cursor: pointer; transition: all 0.15s; white-space: nowrap;
@@ -111,11 +112,11 @@
       
       /* ── CALLOUT BANNER ── */
       .callout {
-        background: var(--purple-faint); border: 1px solid #d8c8f8; border-left: 4px solid var(--purple);
+        background: var(--red-faint); border: 1px solid #dc251183; border-left: 4px solid var(--red);
         border-radius: 10px; padding: 14px 18px; margin-bottom: 28px;
-        font-size: 0.87rem; color: var(--text-mid); line-height: 1.6;
+        font-size: 0.87rem; color: var(--text); line-height: 1.6;
       }
-      .callout strong { color: var(--purple); }
+      .callout strong { color: var(--text); }
       
       /* ── JOURNEY TIMELINE ── */
       .timeline { display: flex; flex-direction: column; gap: 0; }
@@ -152,8 +153,8 @@
         position: relative;
         z-index: 1;
       }
-      .milestone-label-inner.day1   { border-color: var(--purple); background: var(--purple-faint); }
-      .milestone-label-inner.d30    { border-color: var(--red); background: #fff5f5; }
+      .milestone-label-inner.day1   { border-color: var(--red); background: var(--red-faint); }
+      .milestone-label-inner.d30    { border-color: var(--purple); background: var(--purple-faint); }
       .milestone-label-inner.d180   { border-color: var(--amber); background: var(--amber-faint); }
       .milestone-label-inner.d365   { border-color: var(--green); background: var(--green-faint); }
       
@@ -164,10 +165,10 @@
       .milestone-label-inner .day-label {
         font-size: 1.3rem; font-weight: 700; line-height: 1; display: block; margin-top: 2px;
       }
-      .day1   .day-num { color: var(--purple); }
-      .day1   .day-label { color: var(--purple); }
-      .d30    .day-num { color: var(--red); }
-      .d30    .day-label { color: var(--red); }
+      .day1   .day-num { color: var(--red); }
+      .day1   .day-label { color: var(--red); }
+      .d30    .day-num { color: var(--purple); }
+      .d30    .day-label { color: var(--purple); }
       .d180   .day-num { color: var(--amber); }
       .d180   .day-label { color: var(--amber); }
       .d365   .day-num { color: var(--green); }
@@ -184,8 +185,8 @@
         border: 2px solid var(--surface);
         z-index: 2;
       }
-      .milestone:first-child .milestone-label::after { background: var(--purple); }
-      .milestone:nth-child(2) .milestone-label::after { background: var(--red); }
+      .milestone:first-child .milestone-label::after { background: var(--red); }
+      .milestone:nth-child(2) .milestone-label::after { background: var(--purple); }
       .milestone:nth-child(3) .milestone-label::after { background: var(--amber); }
       .milestone:nth-child(4) .milestone-label::after { background: var(--green); }
       
