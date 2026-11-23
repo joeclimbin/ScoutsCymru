@@ -300,7 +300,7 @@
       
       /* ── DBS TAB ── */
       .dbs-intro { max-width: 700px; margin-bottom: 28px; }
-      .dbs-intro p { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 10px; }
+      .dbs-intro p { font-size: 0.9rem; color: var(--text); line-height: 1.7; margin-bottom: 10px; }
       .dbs-steps { display: flex; flex-direction: column; gap: 12px; max-width: 760px; }
       .dbs-step {
         display: flex; gap: 16px; align-items: flex-start;
@@ -308,7 +308,7 @@
       }
       .dbs-num {
         width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
-        background: var(--purple); color: white;
+        background: var(--red); color: white;
         display: flex; align-items: center; justify-content: center;
         font-size: 0.87rem; font-weight: 700;
       }
